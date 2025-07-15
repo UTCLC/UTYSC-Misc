@@ -1,0 +1,179 @@
+scr_battle_core_directory_action_2_name
+135行*  观 察
+scr_draw_text_effect_twitchy_textbox_battle
+第一个string_copy("A", 1, 1)换成string_char_at(message[message_current], 0)
+第二三个string_copy("A", 1, 1)换成string_char_at(message[message_current], i - 1)
+scr_draw_text_effect_twitchy_textbox_battle_dialogue
+第一个string_copy("A", 1, 1)换成string_char_at(message[message_current], 0)
+第二三个string_copy("A", 1, 1)换成string_char_at(message[message_current], i - 1)
+scr_draw_text_effect_twitchy_textbox_battle_item_use
+第一个string_copy("A", 1, 1)换成string_char_at(battle_menu_option_string, 0)
+第二三个string_copy("A", 1, 1)换成string_char_at(battle_menu_option_string, i - 1)
+scr_draw_text_effect_twitchy_textbox_battle_menu_options
+第一个string_copy("A", 1, 1)换成string_char_at(battle_menu_option_string, 0)
+第二三个string_copy("A", 1, 1)换成string_char_at(battle_menu_option_string, i - 1)
+scr_item_use_text_yellow
+761行句号 767行删掉##
+obj_card_game_controller_Draw_74
+53行"赢 得 了 " + 
+obj_credits_final_geno
+obj_credits_final_neutral
+obj_credits_final_pacifist_intermission
+obj_cutscene_starlo_post_fight_neutral_Step_0
+44行"没"
+obj_dialogue_battle_action_selected_item_Draw_0
+删除if往后
+obj_dialogue_battle_move_select_flowey_Step_0
+28~34行
+    for (var i = 0; i < 2; i++)
+    {
+        var new_pos = irandom_range(0, string_length(message[0]) - 1);
+        var old_letter = string_char_at(new_message, new_pos);
+        var new_letter = " ";
+        
+        if (ord(old_letter) > 128)
+            new_letter = chr(irandom_range(19968, 40869));
+        else if (old_letter != " ")
+            new_letter = chr(irandom_range(97, 122));
+        
+        new_message = string_delete(new_message, new_pos, 1);
+        new_message = string_insert(new_letter, new_message, new_pos);
+    }
+obj_dialogue_Draw_64
+12行yy = 7
+122行cutoff换成string_length(message_col[message_current][j]) * (cutoff / string_length(message[message_current]))
+obj_dialogue_drop_Step_0
+7行" 吗 ?" 25行句号
+obj_dialogue_flowey_alone_Step_0
+19行str_width换成string_width(letter_array[i - 1])
+26行str_width换成string_width("#")
+obj_dialogue_special_Step_0
+22行str_width换成string_width(letter_array[i - 1])
+29行str_width换成string_width("#")
+obj_factory_02_controller_02_Step_0
+498行 500行句号
+obj_factory_02_conveyor_belt_panel_2_Step_0
+12行句号
+obj_factory_03_numpad_Step_0
+262行加「」
+obj_mail_drop_Step_0
+13行句号
+obj_mainmenu_Draw_0
+28行175换成210
+obj_martlet_final_overworld_cutscene_Step_0
+309行"*  有 . . ."
+obj_martlets_journal_Step_0
+56行 101行 154行"*  （ 继 续 读 吗 ? ）"
+obj_menu_flowey_Draw_0
+20行175换成210
+obj_miner_giftshopper_Step_0
+20行"*  瞧 一 瞧 看 一 看 !"
+28行"买 了"
+81行加「」
+obj_newhome_03_cutscene_postfight_spare_Step_0
+942行16换32
+976行80换60
+1011行181换189
+1079行173换143
+1096行69换54
+1113行92换54
+1911行"*  拿 到 了 。"
+obj_npc_backtrack_toast_Step_0
+19行"*  嗯 对 . . ."
+obj_quote_battle_axis_attack_end_Create_0
+21行 29行 37行 66行 77行 78行 79行加「」
+38行"「 我 开 - 开 始#后 悔 给 你 那 个#盖 子 了 。」"
+obj_quote_battle_axis_death_Create_0
+message[0] = "「 BzZT-Z// z. ._ . 」";
+message[1] = "「 . . . 㦱 - 㦱 - 」";
+message[2] = "「 - 㦱 怎 - 怎 /# 幺 .. 了 ?";
+message[3] = "「 严 - 严 - 严 重#损 坏 _ 」";
+message[4] = "「 立 卽 㖊 - 寻 求 /#纟 ' 维 修 _ 」";
+message[5] = "「 㦱 知 噵 _ 了 .  . . 」";
+message[6] = "「 㱏 在 呼 叫 MR. ChUJIN_ 」";
+message[7] = "「 发 眀 _ 者 . .. ? 」";
+message[8] = "「 㱏 在 呼 叫 MR. ChUJIN_ 」";
+message[9] = "「 发 眀 _ 者 ，#㦱 需 要 扌 -#援 / / 助 _ 」";
+message[10] = "「 㱏 在 呼 叫 MR. Ch , . _ 」";
+message[11] = "「 /发 眀 .. , .. 」";
+message[12] = "「 㱏 - 在 , , 呼  叫 _ 」";
+message[13] = "「 发 . ... 」";
+message[14] = "「 . 」";
+message[15] = "发 明 者 。";
+obj_quote_battle_axis_geno_end_Create_0
+10行"「 锁 以 祢 _#应 该 芳 弃 。」"
+16行"「 我 镁 有#选 择 的 余 地 。」"
+obj_quote_battle_axis_neutral_geno_end_Create_0
+23行"「 仍 在 _  継#续 ,. . 」"
+37行加「」
+obj_quote_battle_axis_neutral_post_attacks_end_Create_0
+8行加「」
+obj_quote_battle_goosic_a_Create_0
+17行"「 另 - 别 讨 厌 我 的#音 / 音 乐 品 味 _ 」"
+obj_quote_battle_goosic_b_Create_0
+27行"「 另 - 别 讨 厌 我 的#音 / 音 乐 品 味 _ 」"
+obj_quote_battle_guardener_Create_0
+22~28行
+    message[1] = "「 你 - 祢 /#_ 我 . .. 」";
+    message[2] = "[>/ 犯 罪 等 级#降 低 了 _]";
+    message[3] = "...";
+    message[4] = "「 噢 。」 ";
+    message[5] = "「 发 生 什 么 了 ? 」";
+    message[6] = "「 我 的 存 储 核#似 乎 出 现 了 空 -#空 缺 。」";
+    message[7] = "「 我 很 抱 歉 。」";
+50行"「 比 祢 自 _ 己 的 还 ;#重 要 。」"
+78行"[ 呼 叫 支 援 _]"
+97行"_ 继 续 攻 击 _<"
+102行"「 在 / 原 地 _#别 动 ! 」"
+110行"「 机 器 人 们 ，#_ 攻 击 。」"
+156行"「 我 已 纟#- 让 _ 步 了 . .. 」"
+obj_quote_battle_guardener_death_Create_0
+message[0] = "「 BZstzZ;Z t_T#//98 .. - 」";
+message[1] = "[严 重 内 存 错 误 ]";
+message[2] = "「 . . . 」";
+message[3] = "「 被 践 踏 的 花 . .. 」";
+message[4] = "「 . . . 」";
+message[5] = "「 我 记 不 太 清#到 底 发 生#亻 - 十 么 了 _ 」";
+message[6] = "「 如 果 _ 我 在 植 物#芳 面 的 行 为#让 你 / 不 满 意 了#的 话 。";
+message[7] = "「 . . . 」";
+message[8] = "「 不 .. . 我 不 / 会#找 借 口 的 _」";
+message[9] = "「 这 一 定 是 _#我 应 得 的 . .. . 」";
+message[10] = "[ 系 统 故 障 ，#请 立 即 修 复 ]";
+message[11] = "「 . . . 」";
+message[12] = "「 你 的 想 氵 - 去#可 能 有 所 / 不 同 ，#旦 对 我 来 说 .. . 」";
+message[13] = "「 这 花 园 _#. . 」";
+message[14] = "「 很 . ..#美 。」";
+obj_quote_battle_jandroid_a_Create_0
+55行"那 // 那 是#甚 么 ? /("
+59行"蒸_气 木几 房#嘘 要 _/ 一 场 菁 洗#0"
+72行"// 拖 拖 拖 拖 - _"
+76行"我 我 我 们#;-:_#洗 洗 干 净 吧"
+obj_quote_battle_jandroid_b_Create_0
+43行"那 // 那 是#甚 么 ? /("
+47行"蒸_气 木几 房#嘘 要 _/ 一 场 菁 洗#0"
+60行"// 拖 拖 拖 拖 - _"
+64行"我 我 我 们#;-:_#洗 洗 干 净 吧"
+obj_quote_battle_sousborg_Create_0
+17行"晚 ../餐 _:即#将 <就 .>绪 。"
+21行"要 甜 >. 扣 的#_ 还 是 碱 口 的 ?"
+obj_robot_build_dialogue_confirm_Step_0
+24行"好了" 25行"没"
+obj_rodney_hotland_Step_2
+37行"*  近 来 可 好 啊 ?"
+obj_room_controller_snowdin_13_Step_0
+297行"*  没 听 懂 ? "
+obj_saloon_cutscene_03_Step_0
+338行"*  试 试 !"
+obj_soundtrack_snowdin_14b_overworld_yellow_Step_0
+32行"*  你 好 啊 !"
+obj_steamworks_29_controller_neutral_Step_0
+43行加「」
+「你们」→「你」
+obj_steamworks_29_controller_pacifist_Step_0
+71行加「」
+obj_text_item_description_shop_Draw_0
+122行 131行 140行
+obj_text_item_sell_confirmation_Draw_0
+6行" 吗 ?"
+obj_wild_east_cutscene_04_Step_0
+348行"*  太 可 以 了 !"
