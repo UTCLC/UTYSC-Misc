@@ -69,7 +69,7 @@ obj_menu_flowey_Draw_0
 obj_miner_giftshopper_Step_0
 20行"*  瞧 一 瞧 看 一 看 !"
 28行"买 了"
-81行加「」
+81行删除「」
 obj_newhome_03_cutscene_postfight_spare_Step_0
 942行16换32
 976行80换60
@@ -82,6 +82,7 @@ obj_npc_backtrack_toast_Step_0
 19行"*  嗯 对 . . ."
 obj_quote_battle_axis_attack_end_Create_0
 21行 29行 37行 66行 77行 78行 79行加「」
+23行"「 \"ZzzZKKZ#DPPP-D_-A - _\"#根 本 不 成 词 。」"
 38行"「 我 开 - 开 始#后 悔 给 你 那 个#盖 子 了 。」"
 obj_quote_battle_axis_death_Create_0
 message[0] = "「 BzZT-Z// z. ._ . 」";
@@ -106,7 +107,7 @@ obj_quote_battle_axis_geno_end_Create_0
 obj_quote_battle_axis_neutral_geno_end_Create_0
 23行"「 仍 在 _  継#续 ,. . 」"
 37行加「」
-obj_quote_battle_axis_neutral_post_attacks_end_Create_0
+obj_quote_battle_axis_neutral_post_attacks_Create_0
 8行加「」
 obj_quote_battle_goosic_a_Create_0
 17行"「 另 - 别 讨 厌 我 的#音 / 音 乐 品 味 _ 」"
@@ -144,20 +145,58 @@ message[12] = "「 你 的 想 氵 - 去#可 能 有 所 / 不 同 ，#旦 对 �
 message[13] = "「 这 花 园 _#. . 」";
 message[14] = "「 很 . ..#美 。」";
 obj_quote_battle_jandroid_a_Create_0
-55行"那 // 那 是#甚 么 ? /("
-59行"蒸_气 木几 房#嘘 要 _/ 一 场 菁 洗#0"
-72行"// 拖 拖 拖 拖 - _"
-76行"我 我 我 们#;-:_#洗 洗 干 净 吧"
+55~76行
+            message[0] = "那 // 那 是#甚 么 ? /(";
+        }
+        else if (global.last_action_selected == "Action 2 Message 0")
+        {
+            message[0] = "蒸_气 木几 房#嘘 要 _/ 一 场 菁 洗#0";
+        }
+        else if (global.last_action_selected == "Action 3 Message 0")
+        {
+            message[0] = "AaAAaoo/aa/.#Bzzt.’\"<<<";
+        }
+        else
+        {
+            random_message = irandom_range(0, 1);
+            
+            switch (random_message)
+            {
+                case 0:
+                    message[0] = "// 拖 拖 拖 拖 - _";
+                    break;
+                
+                case 1:
+                    message[0] = "我 我 我 们#;-:_#洗 洗 干 净 吧";
 obj_quote_battle_jandroid_b_Create_0
-43行"那 // 那 是#甚 么 ? /("
-47行"蒸_气 木几 房#嘘 要 _/ 一 场 菁 洗#0"
-60行"// 拖 拖 拖 拖 - _"
-64行"我 我 我 们#;-:_#洗 洗 干 净 吧"
+43~64行
+            message[0] = "那 // 那 是#甚 么 ? /(";
+        }
+        else if (global.last_action_selected_2 == "Action 2 Message 0")
+        {
+            message[0] = "蒸_气 木几 房#嘘 要 _/ 一 场 菁 洗#0";
+        }
+        else if (global.last_action_selected_2 == "Action 3 Message 0")
+        {
+            message[0] = "AaAAaoo/aa/.#Bzzt.’\"<<<";
+        }
+        else
+        {
+            random_message = irandom_range(0, 1);
+            
+            switch (random_message)
+            {
+                case 0:
+                    message[0] = "// 拖 拖 拖 拖 - _";
+                    break;
+                
+                case 1:
+                    message[0] = "我 我 我 们#;-:_#洗 洗 干 净 吧";
 obj_quote_battle_sousborg_Create_0
 17行"晚 ../餐 _:即#将 <就 .>绪 。"
 21行"要 甜 >. 扣 的#_ 还 是 碱 口 的 ?"
 obj_robot_build_dialogue_confirm_Step_0
-24行"好了" 25行"没"
+24行"好 了" 25行"没"
 obj_rodney_hotland_Step_2
 37行"*  近 来 可 好 啊 ?"
 obj_room_controller_snowdin_13_Step_0
@@ -173,7 +212,7 @@ obj_steamworks_29_controller_pacifist_Step_0
 71行加「」
 obj_text_item_description_shop_Draw_0
 122行 131行 140行
-obj_text_item_sell_confirmation_Draw_0
+obj_text_sell_confirmation_shop_Draw_0
 6行" 吗 ?"
 obj_wild_east_cutscene_04_Step_0
 348行"*  太 可 以 了 !"
