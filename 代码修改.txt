@@ -3,15 +3,19 @@ scr_battle_core_directory_action_2_name
 scr_draw_text_effect_twitchy_textbox_battle
 第一个string_copy("A", 1, 1)换成string_char_at(message[message_current], 0)
 第二三个string_copy("A", 1, 1)换成string_char_at(message[message_current], i - 1)
+去掉*2
 scr_draw_text_effect_twitchy_textbox_battle_dialogue
 第一个string_copy("A", 1, 1)换成string_char_at(message[message_current], 0)
 第二三个string_copy("A", 1, 1)换成string_char_at(message[message_current], i - 1)
+去掉*2
 scr_draw_text_effect_twitchy_textbox_battle_item_use
 第一个string_copy("A", 1, 1)换成string_char_at(battle_menu_option_string, 0)
 第二三个string_copy("A", 1, 1)换成string_char_at(battle_menu_option_string, i - 1)
+去掉*2
 scr_draw_text_effect_twitchy_textbox_battle_menu_options
 第一个string_copy("A", 1, 1)换成string_char_at(battle_menu_option_string, 0)
 第二三个string_copy("A", 1, 1)换成string_char_at(battle_menu_option_string, i - 1)
+去掉*2
 scr_item_use_text_yellow
 761行句号 767行删掉##
 obj_card_game_controller_Draw_74
